@@ -1,11 +1,16 @@
+
 class Bank:
-    def __init__(self, balance, name, accountNum):
-        self.balance = balance
+    def __init__(self, name, accountNum):
+        self.balance = 0
         self.name = name
-        self.accountnum = accountNum
+        self.accountNum = accountNum
     def withdraw(self, amt):
-        self._balance -= amt
+        self.balance -= abs(amt)
     def deposit(self, amt):
-        self._balance += amt
+        self.balance += abs(amt)
     def printAmt(self):
-        print(self._balance)
+        return(self.balance)
+    def printName(self):
+        return(self.name)
+    def printAccountNum(self):
+        return(self.accountNum)
