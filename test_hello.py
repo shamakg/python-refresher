@@ -1,5 +1,6 @@
 import unittest
 import hello
+import math
 
 
 class TestHello(unittest.TestCase):
@@ -9,6 +10,7 @@ class TestHello(unittest.TestCase):
     def test_sin(self):
         self.assertEqual(hello.sin(0), 0)
         self.assertEqual(hello.sin(1), 0.8414709848078965)
+        self.assertAlmostEqual(hello.sin(1+2*math.pi), 0.8414709848078965)
 
     def test_cos(self):
         self.assertEqual(hello.cos(0), 1)
